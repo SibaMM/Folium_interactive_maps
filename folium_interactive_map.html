@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_de529e5eae26b2fb206eda816ea34d2d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_de529e5eae26b2fb206eda816ea34d2d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_de529e5eae26b2fb206eda816ea34d2d = L.map(
+                "map_de529e5eae26b2fb206eda816ea34d2d",
+                {
+                    center: [-33.9152209, 18.3758852],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_60097d4ed883f5438f17e5caa8a2fcec = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var tile_layer_52166faaf6d5c95a77d510c73340deef = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var layer_control_4d87da596fdc6f16d5b6dfa5e8d9c1c1 = {
+                base_layers : {
+                    "stamenterrain" : tile_layer_60097d4ed883f5438f17e5caa8a2fcec,
+                    "openstreetmap" : tile_layer_52166faaf6d5c95a77d510c73340deef,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_4d87da596fdc6f16d5b6dfa5e8d9c1c1.base_layers,
+                layer_control_4d87da596fdc6f16d5b6dfa5e8d9c1c1.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+            tile_layer_52166faaf6d5c95a77d510c73340deef.remove();
+        
+    
+            var marker_2139f6f8f45ce446a70c2e579194877a = L.marker(
+                [-33.9353221, 18.5065964],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_72b94d3fc5b546a48b9c530dc23535e5 = L.marker(
+                [-33.9353221, 18.5065964],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_9dec1817bbe654ef206141c3eea6fcfa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a9b8ff0d408163b6f982f481bb47a6db = $(`<div id="html_a9b8ff0d408163b6f982f481bb47a6db" style="width: 100.0%; height: 100.0%;">McDonald's Pinelands Drive-Thru</div>`)[0];
+                popup_9dec1817bbe654ef206141c3eea6fcfa.setContent(html_a9b8ff0d408163b6f982f481bb47a6db);
+            
+        
+
+        marker_72b94d3fc5b546a48b9c530dc23535e5.bindPopup(popup_9dec1817bbe654ef206141c3eea6fcfa)
+        ;
+
+        
+    
+    
+            var marker_2de96f6fa28eebbf23e5c63a45e6aca4 = L.marker(
+                [-33.9353221, 18.5065964],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_c429a3029cb4cf59925562fe859fe4f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_2de96f6fa28eebbf23e5c63a45e6aca4.setIcon(icon_c429a3029cb4cf59925562fe859fe4f3);
+        
+    
+        var popup_f4d037bf06185198cffb102cad9787e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2c6a77f828f12508a3ca5c5eaf9b601 = $(`<div id="html_a2c6a77f828f12508a3ca5c5eaf9b601" style="width: 100.0%; height: 100.0%;">Howard Centre, Forest Dr Service Rd, Pinelands, Cape Town, 7450</div>`)[0];
+                popup_f4d037bf06185198cffb102cad9787e9.setContent(html_a2c6a77f828f12508a3ca5c5eaf9b601);
+            
+        
+
+        marker_2de96f6fa28eebbf23e5c63a45e6aca4.bindPopup(popup_f4d037bf06185198cffb102cad9787e9)
+        ;
+
+        
+    
+    
+            var marker_b735619b784760b7d2639dfc6e30bfa3 = L.marker(
+                [-33.9217143, 18.4230236],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_3c1bbf6230b0c3a33a59d63790bb915a = L.marker(
+                [-33.9217143, 18.4230236],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_6b03d6220fd57024647380576cb5f256 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44fefa8bc4c3ca0f82bbb4014719c693 = $(`<div id="html_44fefa8bc4c3ca0f82bbb4014719c693" style="width: 100.0%; height: 100.0%;">McDonald's Strand Street</div>`)[0];
+                popup_6b03d6220fd57024647380576cb5f256.setContent(html_44fefa8bc4c3ca0f82bbb4014719c693);
+            
+        
+
+        marker_3c1bbf6230b0c3a33a59d63790bb915a.bindPopup(popup_6b03d6220fd57024647380576cb5f256)
+        ;
+
+        
+    
+    
+            var marker_cb0e4929ee2515c04e6d3ddfeb1e35cd = L.marker(
+                [-33.9217143, 18.4230236],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_8beb44f9b5a51a0e8fa0df923c3db316 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_cb0e4929ee2515c04e6d3ddfeb1e35cd.setIcon(icon_8beb44f9b5a51a0e8fa0df923c3db316);
+        
+    
+        var popup_d94824b24ae6ecef135921a4e74a1a42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa1f41a4a9616a64d60c29353a507543 = $(`<div id="html_fa1f41a4a9616a64d60c29353a507543" style="width: 100.0%; height: 100.0%;">Cape Town City Centre Cnr Strand Street &, 24A Long St</div>`)[0];
+                popup_d94824b24ae6ecef135921a4e74a1a42.setContent(html_fa1f41a4a9616a64d60c29353a507543);
+            
+        
+
+        marker_cb0e4929ee2515c04e6d3ddfeb1e35cd.bindPopup(popup_d94824b24ae6ecef135921a4e74a1a42)
+        ;
+
+        
+    
+    
+            var marker_523b94cfa4a0a1c464ad11c5c62f6b5d = L.marker(
+                [-33.9015905, 18.633705],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_2e804b3c8d215eae66a442be2ac05983 = L.marker(
+                [-33.9015905, 18.633705],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_451c70db0b0e63b0b7cf15aab96c1fdf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05705d5be8ef6ab55fd92d668d36f2a8 = $(`<div id="html_05705d5be8ef6ab55fd92d668d36f2a8" style="width: 100.0%; height: 100.0%;">McDonald's Maitland Drive-Thru</div>`)[0];
+                popup_451c70db0b0e63b0b7cf15aab96c1fdf.setContent(html_05705d5be8ef6ab55fd92d668d36f2a8);
+            
+        
+
+        marker_2e804b3c8d215eae66a442be2ac05983.bindPopup(popup_451c70db0b0e63b0b7cf15aab96c1fdf)
+        ;
+
+        
+    
+    
+            var marker_afc2077216a63bdaa479605c3872f860 = L.marker(
+                [-33.9015905, 18.633705],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_ed036037d4013767e90f99c11da41f7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_afc2077216a63bdaa479605c3872f860.setIcon(icon_ed036037d4013767e90f99c11da41f7d);
+        
+    
+        var popup_28da07d2414beb4b69d0fcb4d8215cbf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_70f4d8972d4e7626b9ef80e8138ef5be = $(`<div id="html_70f4d8972d4e7626b9ef80e8138ef5be" style="width: 100.0%; height: 100.0%;">199 Voortrekker Rd · 021 510 1130</div>`)[0];
+                popup_28da07d2414beb4b69d0fcb4d8215cbf.setContent(html_70f4d8972d4e7626b9ef80e8138ef5be);
+            
+        
+
+        marker_afc2077216a63bdaa479605c3872f860.bindPopup(popup_28da07d2414beb4b69d0fcb4d8215cbf)
+        ;
+
+        
+    
+    
+            var marker_d526f95ba463318197a7812bb1a3f71b = L.marker(
+                [-33.8703513, 18.5396934],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_e765f03c8d9b93741514da9f358e7ac3 = L.marker(
+                [-33.8703513, 18.5396934],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_a499a8943b6838d2b194326ffccf2a73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e844786bf2061b44d27431c78d8532a9 = $(`<div id="html_e844786bf2061b44d27431c78d8532a9" style="width: 100.0%; height: 100.0%;">McDonald's Milnerton Drive-Thru</div>`)[0];
+                popup_a499a8943b6838d2b194326ffccf2a73.setContent(html_e844786bf2061b44d27431c78d8532a9);
+            
+        
+
+        marker_e765f03c8d9b93741514da9f358e7ac3.bindPopup(popup_a499a8943b6838d2b194326ffccf2a73)
+        ;
+
+        
+    
+    
+            var marker_78335f681a8761f80a9d6c31b95a8f64 = L.marker(
+                [-33.8703513, 18.5396934],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_b7c7a51fea44041c99111dcc87b98b68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_78335f681a8761f80a9d6c31b95a8f64.setIcon(icon_b7c7a51fea44041c99111dcc87b98b68);
+        
+    
+        var popup_b34c78c09028c970bc1b699158e42dcd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_307987b827857efdddbf15d250fa40e9 = $(`<div id="html_307987b827857efdddbf15d250fa40e9" style="width: 100.0%; height: 100.0%;">Cnr Koeberg &, Bosmansdam Rd · 021 551 9905</div>`)[0];
+                popup_b34c78c09028c970bc1b699158e42dcd.setContent(html_307987b827857efdddbf15d250fa40e9);
+            
+        
+
+        marker_78335f681a8761f80a9d6c31b95a8f64.bindPopup(popup_b34c78c09028c970bc1b699158e42dcd)
+        ;
+
+        
+    
+    
+            var marker_fedd157dd1bd81bfb24692a63eaa08b8 = L.marker(
+                [-33.9319319, 18.408851],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_7e545e20ee63858b6c9a2f9fa230d516 = L.marker(
+                [-33.9319319, 18.408851],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_9793d6193135ab977ba45396a01c3ab1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1869dfbf93a5b2e66e49d72b4a2765d1 = $(`<div id="html_1869dfbf93a5b2e66e49d72b4a2765d1" style="width: 100.0%; height: 100.0%;">McDonald's Long Street</div>`)[0];
+                popup_9793d6193135ab977ba45396a01c3ab1.setContent(html_1869dfbf93a5b2e66e49d72b4a2765d1);
+            
+        
+
+        marker_7e545e20ee63858b6c9a2f9fa230d516.bindPopup(popup_9793d6193135ab977ba45396a01c3ab1)
+        ;
+
+        
+    
+    
+            var marker_b9191f379716921e314ebd0ee786c492 = L.marker(
+                [-33.9319319, 18.408851],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_122dffa34ac89e50e438f7264aee3582 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_b9191f379716921e314ebd0ee786c492.setIcon(icon_122dffa34ac89e50e438f7264aee3582);
+        
+    
+        var popup_c1f669f6e97bf7b8d80dc4eba51f2f77 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_331f3a36a537816da9f14dd4ef4635f6 = $(`<div id="html_331f3a36a537816da9f14dd4ef4635f6" style="width: 100.0%; height: 100.0%;"> Kloof St, Gardens, Cape Town, 800,  021 422 1371</div>`)[0];
+                popup_c1f669f6e97bf7b8d80dc4eba51f2f77.setContent(html_331f3a36a537816da9f14dd4ef4635f6);
+            
+        
+
+        marker_b9191f379716921e314ebd0ee786c492.bindPopup(popup_c1f669f6e97bf7b8d80dc4eba51f2f77)
+        ;
+
+        
+    
+    
+            var marker_af1c443b78ef8ce9d75f703883aa6daf = L.marker(
+                [-33.9602272, 18.4703022],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_f3a7eb2efc9ec052eecdef52b2dfb599 = L.marker(
+                [-33.9602272, 18.4703022],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_4d570758419e9063bd02b33db96ce5c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e58a5612ebabf3fd20f487c111303a4f = $(`<div id="html_e58a5612ebabf3fd20f487c111303a4f" style="width: 100.0%; height: 100.0%;">McDonald's Rondebosch</div>`)[0];
+                popup_4d570758419e9063bd02b33db96ce5c4.setContent(html_e58a5612ebabf3fd20f487c111303a4f);
+            
+        
+
+        marker_f3a7eb2efc9ec052eecdef52b2dfb599.bindPopup(popup_4d570758419e9063bd02b33db96ce5c4)
+        ;
+
+        
+    
+    
+            var marker_15ec0ba6d78280a9f885d6a11a024be1 = L.marker(
+                [-33.9602272, 18.4703022],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_c0790724e8f089f8f6e0c3e5a6932f90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_15ec0ba6d78280a9f885d6a11a024be1.setIcon(icon_c0790724e8f089f8f6e0c3e5a6932f90);
+        
+    
+        var popup_552a90dff1818e10ac395755439853d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db98e6ccd0605cd6b0ae1a9f71fba798 = $(`<div id="html_db98e6ccd0605cd6b0ae1a9f71fba798" style="width: 100.0%; height: 100.0%;">51 Main Rd, Rondebosch, Cape Town, 7700,  0860 000 040</div>`)[0];
+                popup_552a90dff1818e10ac395755439853d3.setContent(html_db98e6ccd0605cd6b0ae1a9f71fba798);
+            
+        
+
+        marker_15ec0ba6d78280a9f885d6a11a024be1.bindPopup(popup_552a90dff1818e10ac395755439853d3)
+        ;
+
+        
+    
+    
+            var marker_4c8eaf8b3c46493e2eb9a9ad1499e7cc = L.marker(
+                [-33.8929994, 18.5117243],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_de45d5112ca9a25849116e5a89727754 = L.marker(
+                [-33.8929994, 18.5117243],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_af1d1d27d7edaf23c0ea01e67ce51fcc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b51dbe04226137872071a54fc235808 = $(`<div id="html_3b51dbe04226137872071a54fc235808" style="width: 100.0%; height: 100.0%;">McDonald's Canal Walk</div>`)[0];
+                popup_af1d1d27d7edaf23c0ea01e67ce51fcc.setContent(html_3b51dbe04226137872071a54fc235808);
+            
+        
+
+        marker_de45d5112ca9a25849116e5a89727754.bindPopup(popup_af1d1d27d7edaf23c0ea01e67ce51fcc)
+        ;
+
+        
+    
+    
+            var marker_4974e9b5749f2ccdfe3f7359d0addd9d = L.marker(
+                [-33.8929994, 18.5117243],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_9786324b36f6cc4b494f8c894edfb9d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_4974e9b5749f2ccdfe3f7359d0addd9d.setIcon(icon_9786324b36f6cc4b494f8c894edfb9d8);
+        
+    
+        var popup_7cda330546af00e1b4ceae300f4517c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_022dd87040a057fc7e395411e8047508 = $(`<div id="html_022dd87040a057fc7e395411e8047508" style="width: 100.0%; height: 100.0%;">Canal Walk Shopping Centre, Century Blvd · In Canal Walk · 021 552 0090</div>`)[0];
+                popup_7cda330546af00e1b4ceae300f4517c3.setContent(html_022dd87040a057fc7e395411e8047508);
+            
+        
+
+        marker_4974e9b5749f2ccdfe3f7359d0addd9d.bindPopup(popup_7cda330546af00e1b4ceae300f4517c3)
+        ;
+
+        
+    
+    
+            var marker_da3b3e0e3a3761a2f8e016e907205a56 = L.marker(
+                [-33.9601841, 18.5437027],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_e69fb359fa52d5a380c531aa80efd4e6 = L.marker(
+                [-33.9601841, 18.5437027],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_ae47f0002ce76582ea4cbf2049e56686 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebfd415f92ff00c8627ac25f7a0ac9eb = $(`<div id="html_ebfd415f92ff00c8627ac25f7a0ac9eb" style="width: 100.0%; height: 100.0%;">McDonald's Vangate Drive-Thru</div>`)[0];
+                popup_ae47f0002ce76582ea4cbf2049e56686.setContent(html_ebfd415f92ff00c8627ac25f7a0ac9eb);
+            
+        
+
+        marker_e69fb359fa52d5a380c531aa80efd4e6.bindPopup(popup_ae47f0002ce76582ea4cbf2049e56686)
+        ;
+
+        
+    
+    
+            var marker_c2764806842827d4db51237f833e8a28 = L.marker(
+                [-33.9601841, 18.5437027],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_5a1984d375bf87b6da5c9d188301a0e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_c2764806842827d4db51237f833e8a28.setIcon(icon_5a1984d375bf87b6da5c9d188301a0e1);
+        
+    
+        var popup_5522e45e0e8233ea798c2ca27459e4d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ae19b7b2ec76f7bea54515a28674b8d = $(`<div id="html_8ae19b7b2ec76f7bea54515a28674b8d" style="width: 100.0%; height: 100.0%;">Vangate Mall Cnr M7 &, Heideveld Rd · 021 637 5253</div>`)[0];
+                popup_5522e45e0e8233ea798c2ca27459e4d1.setContent(html_8ae19b7b2ec76f7bea54515a28674b8d);
+            
+        
+
+        marker_c2764806842827d4db51237f833e8a28.bindPopup(popup_5522e45e0e8233ea798c2ca27459e4d1)
+        ;
+
+        
+    
+    
+            var marker_27809ee4966bc14fd015946f198ee99e = L.marker(
+                [-33.9814897, 18.4655543],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_ee70cfad26ea6b989a838e981546a46b = L.marker(
+                [-33.9814897, 18.4655543],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_7cff852fc4485853785ba17ce1496426 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aaf90305a534566ef3d89553a87eb9cc = $(`<div id="html_aaf90305a534566ef3d89553a87eb9cc" style="width: 100.0%; height: 100.0%;">McDonald's Claremont</div>`)[0];
+                popup_7cff852fc4485853785ba17ce1496426.setContent(html_aaf90305a534566ef3d89553a87eb9cc);
+            
+        
+
+        marker_ee70cfad26ea6b989a838e981546a46b.bindPopup(popup_7cff852fc4485853785ba17ce1496426)
+        ;
+
+        
+    
+    
+            var marker_f394f7d095db3341b698a6e4cb0373a4 = L.marker(
+                [-33.9814897, 18.4655543],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_849848b8665a46bb194f2af7ff650ca0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_f394f7d095db3341b698a6e4cb0373a4.setIcon(icon_849848b8665a46bb194f2af7ff650ca0);
+        
+    
+        var popup_7671a9f532b16c12f2ec1306bb84330c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a2fe57098eabdfe476664b902b17ff1 = $(`<div id="html_5a2fe57098eabdfe476664b902b17ff1" style="width: 100.0%; height: 100.0%;">171&nbsp, Main Rd, Claremont, Cape Town, 7708</div>`)[0];
+                popup_7671a9f532b16c12f2ec1306bb84330c.setContent(html_5a2fe57098eabdfe476664b902b17ff1);
+            
+        
+
+        marker_f394f7d095db3341b698a6e4cb0373a4.bindPopup(popup_7671a9f532b16c12f2ec1306bb84330c)
+        ;
+
+        
+    
+    
+            var marker_459652628e01713f5f80045dea346aaa = L.marker(
+                [-33.9079879, 18.4008669],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_25e1973ecdbfb6e5cac6f64906e5da4d = L.marker(
+                [-33.9079879, 18.4008669],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_e8e5350ac67c51ca762d76683dc0ccd5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d396d93881d0c28df715326b5f9e01f = $(`<div id="html_1d396d93881d0c28df715326b5f9e01f" style="width: 100.0%; height: 100.0%;">McDonald's Seapoint Drive-Thru</div>`)[0];
+                popup_e8e5350ac67c51ca762d76683dc0ccd5.setContent(html_1d396d93881d0c28df715326b5f9e01f);
+            
+        
+
+        marker_25e1973ecdbfb6e5cac6f64906e5da4d.bindPopup(popup_e8e5350ac67c51ca762d76683dc0ccd5)
+        ;
+
+        
+    
+    
+            var marker_3aa3f8393e0bdb7fef98e15411d21d7f = L.marker(
+                [-33.9079879, 18.4008669],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_6074618245acbe86b12874d7d555b9a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_3aa3f8393e0bdb7fef98e15411d21d7f.setIcon(icon_6074618245acbe86b12874d7d555b9a3);
+        
+    
+        var popup_d63468972710e16528f45e14422a8d57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39a12ef8fe7f69e0df9cbfda248f3a30 = $(`<div id="html_39a12ef8fe7f69e0df9cbfda248f3a30" style="width: 100.0%; height: 100.0%;"> Cnr Main Road &, The Glen, Sea Point, Cape Town, 8060</div>`)[0];
+                popup_d63468972710e16528f45e14422a8d57.setContent(html_39a12ef8fe7f69e0df9cbfda248f3a30);
+            
+        
+
+        marker_3aa3f8393e0bdb7fef98e15411d21d7f.bindPopup(popup_d63468972710e16528f45e14422a8d57)
+        ;
+
+        
+    
+    
+            var marker_3ddb1a9903c2fb866e5e597a3cc4e787 = L.marker(
+                [-33.9255306, 18.4213881],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var marker_cd2fadb9d05fc0d879ec0760c9bc2a06 = L.marker(
+                [-33.9255306, 18.4213881],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+        var popup_fc848b9a6256af62c177257c13cbfad6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b5a4ce5f944f19162e4855fb3e959cf8 = $(`<div id="html_b5a4ce5f944f19162e4855fb3e959cf8" style="width: 100.0%; height: 100.0%;">McDonald’s Spin Street</div>`)[0];
+                popup_fc848b9a6256af62c177257c13cbfad6.setContent(html_b5a4ce5f944f19162e4855fb3e959cf8);
+            
+        
+
+        marker_cd2fadb9d05fc0d879ec0760c9bc2a06.bindPopup(popup_fc848b9a6256af62c177257c13cbfad6)
+        ;
+
+        
+    
+    
+            var marker_8f2e5d59c346e48085193478e9d83954 = L.marker(
+                [-33.9255306, 18.4213881],
+                {}
+            ).addTo(map_de529e5eae26b2fb206eda816ea34d2d);
+        
+    
+            var icon_bc932e8188d5d816b80bfeb548f4fb27 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "tint", "iconColor": "white", "markerColor": "darkblue", "prefix": "fa"}
+            );
+            marker_8f2e5d59c346e48085193478e9d83954.setIcon(icon_bc932e8188d5d816b80bfeb548f4fb27);
+        
+    
+        var popup_630c46771757c9abeaa34bce10258742 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3427017ad3447d9c6eccf988f6899e6 = $(`<div id="html_f3427017ad3447d9c6eccf988f6899e6" style="width: 100.0%; height: 100.0%;">Cape Town City Centre Cnr Parliament Street &, Spin St · 021 422 1185</div>`)[0];
+                popup_630c46771757c9abeaa34bce10258742.setContent(html_f3427017ad3447d9c6eccf988f6899e6);
+            
+        
+
+        marker_8f2e5d59c346e48085193478e9d83954.bindPopup(popup_630c46771757c9abeaa34bce10258742)
+        ;
+
+        
+    
+</script>
+</html>
